@@ -1,5 +1,5 @@
 ###
-Criação da função e parâmetros para a fixação da subnav.
+creates the subnav fixation effect.
 ###
 $win = $ window
 $nav = $ '.subnav'
@@ -22,8 +22,8 @@ $win.on 'scroll', processScroll
 
 
 ###
-Adição da funcionalidade of expandir para as widgets.
-Quando o botão of expandir for clicado irá ser adicionada a classe expanded para a widget.
+Add the 'expand' feature to the widgets.
+When the button is clicked the .expanded class will be added to the targeted widgtet.
 ###    
 $(".expander").on "click", (e) ->
   $(@).parents('[class^="widget-"]').toggleClass "expanded"
@@ -31,9 +31,8 @@ $(".expander").on "click", (e) ->
   
 
 ###
-Adição da funcionalidade of painel of configuração para as widgets.
-quando o botão of configurações for clicado irá ser adicionada a classe open para o painel of configurações,
-abrindo o mesmo.
+Add the configuration pannel to the widgets.
+When the button is clicked the .open class will be added to the settings pannel, and with that, making it visible.
 ### 
 $(".settings-nub").on "click", (e) ->
   $(@).toggleClass("open").parent().parent().find(".settings").toggleClass "open"
@@ -41,7 +40,7 @@ $(".settings-nub").on "click", (e) ->
 
 
 ###
-Botando o botão do formulário of configurações para fechar o painel quando o mesmo for clicado.
+Close the configurations pannel when the filter button is clicked.
 ### 
 $(".settings button").on "click",(e) ->
   if $(@).hasClass "btn-filtro"
@@ -50,23 +49,21 @@ $(".settings button").on "click",(e) ->
 
 
 ###
-Adição do filtro para indicar as tooltips, todo elemento com o atributo rel='tooltip' irá ter um tooltip,
-com o conteúdo igual ao do atributo title deste mesmo elemento.
-Esse código usa o bootstrap.tooltip que está incluso no bootstrap.min.js
+ADd the tooltip initializer, using the bootstrap's native plugin.
 ### 
 $("[rel='tooltip']").tooltip()
 
 
 ###
-Adição da funcionalidade of altocomplete para os elementos com a classe chosen.
-Este auto complete NÃO contém chamadas em AJAX, ele pega e monta a lista of elementos baseada em um ul ou select.
-Esse código usa o chosen que está incluso no chosen.jquery.min.js
+Add the autocomplete feature to the elements with the .chosen class.
+This autocomplete DOES NOT feature AJAX calls, it mounts the autocompletion based on the list itens of a ul or select elements.
+The chosen plugin is at js/chosen.jquery.min.js
 ### 
 $(".chosen").chosen {no_results_text: "No result found"}
 
 
 ###
-definição of um atributo para simular o retorno of uma consulta a uma página em ajax para os autocomplete.
+Making some bootstrap data to be used on the AJAX autocomplete.
 ### 
 data = {items: [
   {value: "21", name: "A item"},
@@ -77,16 +74,15 @@ data = {items: [
 
 
 ###
-Adição da funcionalidade of autocomplete, com multiplos itens, para os elementos com a classe autocomplete e para o input of #message-form.
-Este ultimo foi necessária outra configuração pois o label inicial para o elemento é diferente do padrão.
-Esse código usa o AutoSuggest que está incluso no jquery.autosugest.min.js
+Adds the AJAX autocomplete feature, with multiple selections, to the elements with the .autocomplete class and to the #message-form input on the messages widget.
+This code uses the AutoSuggest plugin, it is at js/jquery.autosugest.min.js
 ### 
 $(".autocomplete").autoSuggest data.items, {selectedItemProp: "name", searchObjProps: "name", startText: "Add filter", emptyText: "No results", limitText: "You can't make another selection", minChars: 2, selectionLimit: 3}
 $("#message-form input").autoSuggest data.items, {selectedItemProp: "name", searchObjProps: "name", startText: "Send to", emptyText: "No results", limitText: "You can't make another selection", minChars: 2, selectionLimit: 3}
 
 
 ###
-Adição do efeito of focus/blur para o elemento do autocomplete igual ao comportamento dos inputs padrão.
+Add the focus/blur effect to the autocomplete, to mimmic the native bootstrap look.
 ###
 $(".as-selections input").focus(->
     $(@).parent().parent().addClass "focus"
@@ -95,8 +91,8 @@ $(".as-selections input").focus(->
 
 
 ###
-Adição da funcionalidade of autocomplete, com apenas 1 item, para os elementos com a classe mun-autocomplete.
-Esse código usa o bootstrap.typeahead que está incluso no bootstrap.min.js
+Add the single item autocomplete, with ajax, feature, targeted to the mun-autocomplete class.
+This code uses the bootstrap.typeahead that is included on the js/bootstrap.min.js file.
 ###
 $(".mun-autocomplete").typeahead {
     source: [
@@ -108,9 +104,8 @@ $(".mun-autocomplete").typeahead {
 
 
 ###
-Adição da funcionalidade of filtro online/offile para a widget of transmissão.
-Quando o botão online/offline for clicado, irá ser adicionada a classe active para este botão e serão escondidos
-os elementos com o data-trans-status que não for compatível com o data-trans-status do botão.
+Add the online/offline filter feature to the first widget.
+When one of the filter buttons is clicked, it will add the .active class to the clicked button and the elements with the data-trans-status not equal to it's data-trans-status will be hidden.
 ###
 $('[class^="widget-"] > .form-actions > .btn').on "click", (e) ->
   if $(@).data("toggle") is "button"
@@ -135,7 +130,7 @@ $('[class^="widget-"] > .form-actions > .btn').on "click", (e) ->
 
 
 ###
-Abre as opções (próximo nível, visualizar pessoas e adicionar x) dos itens das listas que estão presentes nas widgets of transmissão, ocorrências e totalização.
+Expands the options to the items that has the .has-item-options class.
 ###
 $(".code-wrap .has-item-options li > a").live "click", (e) ->
   $(@).next(".item-options").slideToggle "fast"
@@ -144,7 +139,7 @@ $(".code-wrap .has-item-options li > a").live "click", (e) ->
 
 
 ###
-Delega aos botões presente nas opções dos itens das listas das widgets para fechar o mini-painel deles quando clicados.
+When a button on the expanded pannel of the itens is clicked, the expanded pannel is closed to mimmic a performed action.
 ###
 $(".option-open, .option-close").live "click", (e) ->
   $(@).parent().slideUp "fast"
@@ -153,31 +148,30 @@ $(".option-open, .option-close").live "click", (e) ->
 
 
 ###
-Adiciona a funcionalidade of navegação em 'páginas' para as widgets of ocorrências, totalização e ocorrências da corregedoria.
-Esta funcionalidade simula com o setTimeout o carregamento do próximo nível com AJAX. O código inicial da próxima página já estará
-presente no html, como #step-x, sendo 'x' o número da página que o próximo nível estará. Cada widget terá um nível máximo of páginas,
-e todas já deverão conter o html das páginas (#step-x) presentes no início para os efeitos poderem ser processados.
-ex.:
+Add the 'level navigation' feature to the widgets.
+This widget simulates a AJAX call, of the next level's items, with the setTimeout function. 
+To this concept, the initial code of the next level would already be present on the 'final' HTML
+with the #step-x id, being 'x' the pagination number that the level will be. Only the content would be loaded via an AJAX call.
+eg.:
 
 <div class='content-wrap'>
   <div class='step-1 current'>
-    <!-- div atualmente visível na tela -->
+    <!-- visible div on the screen -->
   </div>
   <div class='step-2'>
-   <!-- div escondida, e aqui irá o conteúdo que será carregado via AJAX -->
+   <!-- hidden div, that will have it's content loaded via AJAX -->
   </div>
   <div class='step-3'>
-    <!-- div escondida, e aqui irá o conteúdo que será carregado via AJAX -->
+   <!-- hidden div, that will have it's content loaded via AJAX -->
   </div>
   ...
 </div>
 
-Com um método com AJAX funcionando of verdade, após a chamada $(this).parents('[class^="widget-"]').find(".loading").addClass("open"),
-no success do método AJAX injetaria-se o HTML of resposta na div $('.step-x').next('.step-x+1').html($meuHTMLdeResposta).
-Em seguida seriam execudados os procedimentos que estão contidos no setTimeout para promover a animação e esconder o painel
-com indicador of carregamento.
+With a real AJAX call, after the call of the $(this).parents('[class^="widget-"]').find(".loading").addClass("open") part,
+on the method's success event the final HTML with the content would be injected as response a the div $('.step-x').next('.step-x+1').html($meuHTMLdeResposta).
+Following that, the procedures that are executed at the setTimeout function are trigged to animate and hide the pannel with the loading indicator.
 
-A formatação do HTML deve ser idêntica à encontrada dentro das divs .step-x nas widgets.
+The HTML formatting must be as the example above, and the one found at the HTML.
 ###
 $(".btn-next").live "click", (e) ->
   $(@).parents('[class^="widget-"]').find(".loading").addClass "open"
@@ -190,24 +184,24 @@ $(".btn-next").live "click", (e) ->
 
 
 ###
-Adiciona a navegação of volta entre as 'páginas' das widgets of ocorrências, totalização e ocorrências da corregedoria.
-Para voltar para a 'página' anterior não será necessário ajax, pois a 'página' anterior irá estar apenas 'escondida' à esquerda
-da página atual. A página atual será marcada com a classe current e as páginas anteriores com a classe past.
-As 'próximas' páginas não precisam ter outras classes a não ser a classe step-x.
+Add the 'back to the previous level' feature to the widgets that have the 'level navigation'.
+To return to the previous level there is no AJAX call. Just straight up DOM manipulation and visual effects. Because the previous page is 'hidden' at the left of the current page. 
+The current page will be marked with the .current class, and the pages that where active will be marked with the .past class.
+The 'next' levels don't need any other class that is not the .step-x class.
 ex.:
 
 <div class='content-wrap'>
   <div class='step-1 past'>
-    <!-- div escondida, que já tem o conteúdo HTML carregado e cacheado -->
+    <!-- hidden div, that has the populated DOM -->
   </div>
   <div class='step-2 past'>
-    <!-- div escondida, que já tem o conteúdo HTML carregado e cacheado -->
+    <!-- hidden div, that has the populated DOM -->
   </div>
   <div class='step-3 current'>
-    <!-- div atualmente visível na tela -->
+    <!-- currently visible div on the screen -->
   </div>
   <div class='step-4'>
-    <!-- div escondida, e aqui irá o conteúdo que será carregado via AJAX -->
+    <!-- hidden div, that will have it's content loaded via AJAX -->
   </div>
   ...
 </div>
@@ -218,10 +212,9 @@ $(".btn-prev").live "click", (e) ->
 
 
 ###
-Para as widgets of ocorrências e of totalização, deverá ter a opção of dividir ou não as ultimas 'páginas',
-para os usuários que estão em zonas com poucas seções e locais, respectivamente.
-Este método simula a injeção of conteúdo HTML ($htmlOcorrencia, $htmlSecao, $$htmlLocal e $htmlSecaoTot) vindo of uma requisição AJAX.
-Esta função é re-utilizada pelos dois botões of dividir/não dividir das widgets of totalização e ocorrências.
+Add the 'toggle view mode' to the widgets.
+This method mimmics the injection of HTML ($htmlOcorrencia, $htmlSecao, $$htmlLocal e $htmlSecaoTot) from a AJAX call.
+This function is used by the two states of the view mode.
 ###
 $(".btn-divide").live "click", (e) ->
   $htmlOcorrencia = '<a href="#" class="btn btn-small pull-left btn-prev clearfix" rel="tooltip" title="Back"><i class="icon-circle-arrow-left"></i></a>
@@ -510,8 +503,7 @@ $(".btn-divide").live "click", (e) ->
 
 
 ###
-Quando o usuário clicar no checkbox para marcar uma ocorrência como fechada ele terá o feedback no botão do formulário,
-onde o mesmo irá mudar of Enviar para Fechar ocorrência. O inverso irá acontecer quando o usuário desmarcar o checkbox.
+This is the function to simulate multiple actions on the form of the second widget. Just add/remove some extra options when the checkboxes are toggled.
 ###
 $(".modal .operations .resolved").live "click", ->
   if $(@).attr "checked"
@@ -535,12 +527,7 @@ $(".modal .operations .duplicated").live "click", ->
 
 
 ###
-Quando o usuário clicar no botão para bloquear um informante ele terá um feedback que:
-* irá exibir um alerta of confirmação para prosseguir ou não com o bloqueio do informate
-* se o usuário confirmar o bloqueio do informante o dado do informante irá ficar vermelho e ficar com um traço
-  também irá mudar o botão of bloqueio para o botão of desbloqueio
-* se o usuário cancelar a operação of bloqueio nada será feito
-O inverso acontece quando o botão of desbloqueio estiver presente e for clicado.
+Mimmics a blocking action on the modal window visualzation of the second widget.
 ###
 $(".btn-block").live "click", (e) ->
   blockString = if $(@).hasClass "btn-danger" then "block" else "don't block"
@@ -558,24 +545,7 @@ $(".btn-block").live "click", (e) ->
 
 
 ###
-Esta função é responsável pelos (micro)formulários AJAX dentro da visualização of ocorrências. Estes formulários são:
-* Delegar equipe
-* Problema of urna
-
-Esta função é ativada no clique dos botões:
-* delegar equipe
-* checkbox of problema of urna 
-* botão delegar dentro do fomulário of escolha of equipe
-* botão of modificar dentro do formulário of escolha of tipo of problema
-
-Esta função dá os seguintes feedbacks:
-* quando o usuário selecionar e submeter uma equipe, muda-se o valor da equipe atual para a equipe selecionada
-* quando o usuário selecionar e submeter um tipo of problema: 
-  ** irá adicionar labels ao cabeçalho da modal window com o tipo do problema
-     e com o número da urna (que deverá ser informado automaticamente pelo sistema)
-  ** irá substituir o checkbox of tipo of problema por selects:
-     *** com os tipos of problema, com o tipo of problema escolhido selecionado
-     *** com os tipos of solução
+This function add/remove itens on the modal window visualization of the second widget.
 ###
 $('.choose-mini-form .close, .open-mini-form, .close-mini-form').live "click", (e) ->
   if $(@).hasClass "close-mini-form"
@@ -601,8 +571,7 @@ $('.choose-mini-form .close, .open-mini-form, .close-mini-form').live "click", (
 
 
 ###
-Quando o usuário escolher um tipo of solução, e este tipo for troca of urna, irá aparecer um campo para o usuário
-informar o número da urna of contingência.
+More dummy stuff on the modal window visualization of the second widget.
 ###
 $("#solucao").live "change", ->
   if $("#solucao option:selected").data("solution") is "troca"
@@ -612,13 +581,7 @@ $("#solucao").live "change", ->
 
 
 ###
-Este código é responsável pela abertura da modal of visualização of pessoas.
-Ela é utilizada pelas widgets of transmissão, ocorrência e totalização.
-De acordo com o nível, ou 'página', que o usuário estiver na widget a modal irá exibir um conteúdo diferente,
-que deverá ser carregado via AJAX (aqui simulado pelas variáveis $htmlTransmissao, $htmlSecao, $htmlLocal e $htmlMunicipio).
-Os titulos da modal também irá variar of acordo com o item clicado, no caso da widget of local of transmissão o título também irá
-conter o status (online/offline + H/N/A/L).
-A verificação of qual o nível, ou 'página' que a widget está sendo chamada é feita pelo atributo data-type.
+This function mimmics the AJAX injection of data (aqui simulado pelas variáveis $htmlTransmissao, $htmlSecao, $htmlLocal e $htmlMunicipio) on the 'view data' buttons of some items.
 ###
 $('[href="#visualizarPessoas"]').live "click", ->
   $htmlTransmissao = '<h4>Some random people!</h4><br />
@@ -746,9 +709,7 @@ $('[href="#visualizarPessoas"]').live "click", ->
 
 
 ###
-Na widget of mensagens, o formulário contendo os campos irá exibir apenas o textarea inicialmente.
-Porém, quando este textarea entrar em foco, o sistema irá exibir os outros campos, adicionando a classe visible para
-os campos inicialmente escondidos e retracted para o textarea e #messages para o formulário ficar com a exibição mais homogênea.
+This retracts/shows the #message-form
 ###
 $("#message-form form textarea").on "focus", ->
   $(@).addClass "retracted"
@@ -757,9 +718,8 @@ $("#message-form form textarea").on "focus", ->
 
 
 ###
-Quando o usuário submeter a mensagem, na widget of mensagens, o formulário irá voltar para seu estado inicial,
-com apenas o campo textarea exibido. O script também irá limpar todos os dados do formulário.
-Ao final do envio da mensagem, irá ser exibido um alerta como forma of feedback para o usuário.
+This resets the #message-form to it's original state when the submit button is clicked.
+Also, it shows a little notification.
 ###
 $("#message-form form button").on "click", (e) ->
   $(@).parents("form").find("textarea").removeClass("retracted").val ""
@@ -778,15 +738,14 @@ $("#message-form form button").on "click", (e) ->
 
 
 ###
-Para simular o envio com ajax, o submit do form irá receber false para não recarregar a página.
+Just avoid the form submition.
 ###
 $("#message-form form").on "submit", ->
   false
 
 
 ###
-Ao final of toda operação irá ser exibido um alerta para o usuário como forma of feedback, já que todas as operações
-do sistema são feitas com AJAX.
+This function is responsible to show a notification when a form is submitted.
 ###
 $(".modal .modal-footer .btn-primary, .modal .modal-footer .btn-danger").on "click", ->
   $(@).parents(".container").find(".alert").slideToggle('fast').remove()
@@ -807,10 +766,7 @@ $(".modal .modal-footer .btn-primary, .modal .modal-footer .btn-danger").on "cli
 
 
 ###
-Quando o sistema estiver sendo exibido num tablet ou em um desktop com monitor entre 800x600/1024x768 o layout irá mudar para exibir
-apenas 1 widget por vez e haverá também navegação/paginação entre widgets.
-Para isto o elemento mobile-widgets-nav foi criado e os links deles irão ser usados para navegar entre as widgets of forma parecida
-com a navegação entre as páginas of uma widget.
+This adds a specila navigation to the resolutions between 800x600/1024x768.
 ###
 $("#mobile-widgets-nav a").live "click", (e) ->
   if $(@).hasClass "btn-next"
@@ -841,13 +797,9 @@ $("#mobile-widgets-nav a").live "click", (e) ->
         
   e.preventDefault()
 
-# teste of definição para verificação of dados of local of transmissão pelo técnico of transmissão caso tenha mudado o local
-#$("#alterarDadosTransmissao").modal "toggle"
 
 ###
-Quando o botão para esconder a barra lateral, contendo a widget of mensagens, for clicado:
-Esta será retraída (adicionando a classe .retracted), o ícone do botão irá mudar para indicar
-que agora ele irá expandir a sidebar e a div .widgets irá ser expandida, adicionando a classe .expanded.
+This function toggles the messages widget.
 ###
 $("#sidebar-toggle a").on "click", (e) ->
   $(@).parent().toggleClass "nl"
@@ -860,7 +812,7 @@ $("#sidebar-toggle a").on "click", (e) ->
   $(@).parents(".row").find(".widgets").toggleClass "expanded"
   
 ###
-Irá substituir os checkboxes e radio buttons por switches
+This function will replace the targeted radio buttons to a specil 'switch' element.
 ###
 $('input[type=radio].mini-switch, input[type=checkbox].mini-switch').hide().after '<span class="mini-switch-replace"></span>'
 
