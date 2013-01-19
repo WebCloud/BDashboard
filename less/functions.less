@@ -1,0 +1,64 @@
+.simple-gradient(@color1, @color2){
+  background-color: @color2; /* Old browsers */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(100%,@color2)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, @color1 0%,@color2 100%); /* Chrome 10+,Safari 5.1+ */
+  background-image: -ms-linear-gradient(top, @color1 0%,@color2 100%); /* IE10+ */
+  background-image: -o-linear-gradient(top, @color1 0%,@color2 100%); /* Opera 11.10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=0 ); /* IE6-9 */
+  background-image: linear-gradient(top, @color1 0%,@color2 100%); /* W3C */
+}
+
+.text-shadow(@shadow){
+  -webkit-text-shadow: @shadow;
+  -moz-text-shadow: @shadow;
+  -o-text-shadow: @shadow;
+  -ms-text-shadow: @shadow;
+  text-shadow: @shadow;
+}
+
+.box-shadow(@shadow){
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  -o-box-shadow: @shadow;
+  -ms-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -ms-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+
+.transform(@transform){
+  -webkit-transform:@transform;
+  -moz-transform:@transform;
+  -ms-transform:@transform;
+  -o-transform:@transform;
+  transform:@transform;
+}
+
+.transform-origin(@transform){
+  -webkit-transform-origin:@transform;
+  -moz-transform-origin:@transform;
+  -ms-transform-origin:@transform;
+  -o-transform-origin:@transform;
+  transform-origin:@transform;
+}
+
+.border-radius(@radius:4px){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  -ms-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}

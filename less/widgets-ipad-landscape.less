@@ -1,0 +1,114 @@
+.expander{
+  display: none;
+}
+
+#sidebar-toggle{
+  display: none;
+}
+
+#sidebar{
+  height: 620px !important;
+  
+  #messages{
+    height: 512px !important;
+  }
+}
+
+.widgets {
+  width: 669px;
+  overflow: hidden;
+
+  [class^="widget-"]{
+    left: 651px;
+    height: 620px;
+    
+    &.current{
+      left: 34px;
+    }
+    &.past{
+      left: -651px;
+    }
+    
+    ul.nav-pills li .item-options a.user-list {
+      margin-left: 38%;
+    }
+    
+    .btn-add-ocorrencia {
+      padding: 9px 210px;
+    }
+    
+    .code-wrap{
+      height: 564px;
+      
+      [class^="step-"] {
+        width: 561px;
+        
+        a.btn-load-more {
+          padding: 9px 221px;
+        }
+      }
+      
+      &.transmissao{
+        height: 449px;
+        
+        ul.nav-pills li .item-options a.btn-large {
+          margin-left: 35%;
+        }
+      }
+      
+      &.corregedoria {
+        height: 518px;
+      }
+    }
+    
+    .btn-load-more {
+      padding: 9px 232px;
+    }
+    
+    &.span4{
+      width: 580px;
+    }
+   }
+   
+   .widget-totalizacao, .widget-corregedoria {
+     top: 0!important;
+   }
+   
+   #mobile-widgets-nav{
+     display: block;
+     position: relative;
+     z-index: 1003;
+     
+     .btn{
+       top: 290px;
+       position: absolute;
+       outline: none;
+       
+       &.disabled{
+         display: none;
+       }
+       
+       &.btn-prev{
+         left: 19px;
+       }
+       
+       &.btn-next{
+         right: 0px;
+       }
+     }
+     
+     #pages{
+       position: absolute;
+       top: 620px;
+       left: 45%;
+       
+       span{
+         font-size: 55px;
+         color: #CECECE;
+       }
+       .current{
+         color: #5E5E5E;
+       }
+     }
+   }
+}

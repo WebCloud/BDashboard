@@ -1,0 +1,386 @@
+@import "bootstrap/bootstrap";
+@import "bootstrap/responsive";
+@import "functions";
+
+.logo{
+  float: left;
+  margin: 1px 10px 0 0;
+  padding: 0!important;
+}
+#logo-dropdown{
+ .caret{
+   border-top-color: white;
+  }
+  .dropdown-menu{
+    top: 35px;
+    left: 106px;
+  }
+}
+/* Jumbotrons */
+.jumbotron {
+  position: relative;
+  h1 {
+    margin-bottom: 9px;
+    font-size: 81px;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+  p {
+    margin-bottom: 18px;
+    font-weight: 300;
+  }
+  .btn-large {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 14px 24px;
+    margin-right: 10px;
+    .border-radius(6px);
+  }
+}
+
+/* Specific jumbotrons
+------------------------- */
+/* supporting docs pages */
+.subhead {
+  padding-bottom: 0;
+  margin-bottom: 9px;
+  h1 {
+    font-size: 54px;
+  }
+}
+
+/* Subnav */
+.subnav {
+  width: 100%;
+  height: 36px;
+  .simple-gradient(#eeeeee,#f5f5f5);  
+  border: 1px solid #e5e5e5;
+  .border-radius(4px);
+  .nav {
+    margin-bottom: 0;
+  }
+  .nav > li > a {
+    margin: 0;
+    padding-top:    11px;
+    padding-bottom: 11px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #e5e5e5;
+    .border-radius(0);
+    
+  }
+  .nav > .active > a, .nav > .active > a:hover {
+    padding-left: 13px;
+    color: #777;
+    background-color: #e9e9e9;
+    border-right-color: #ddd;
+    border-left: 0;
+    .box-shadow(inset 0 3px 5px rgba(0,0,0,.05));
+  }
+  .nav > .active > a .caret, .nav > .active > a:hover .caret {
+    border-top-color: #777;
+  }
+  .nav > li:first-child > a, .nav > li:first-child > a:hover {
+    border-left: 0;
+    padding-left: 12px;
+    .border-radius(4px 0 0 4px);
+  }
+  .nav > li:last-child > a {
+    border-right: 0;
+  }
+  .dropdown-menu {
+    .border-radius(0 0 4px 4px);
+  }
+}
+
+/* Fixed subnav on scroll, but only for 980px and up (sorry IE!) */
+@media (min-width: 980px) {
+  .subnav-fixed {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
+    border-color: #d5d5d5;
+    border-width: 0 0 1px; /* drop the border on the fixed edges */
+    .border-radius(0);
+    -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+    -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+    -o-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+    -ms-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); /* IE6-9 */
+    .nav {
+      width: 938px;
+      margin: 0 auto;
+      padding: 0 1px;
+    }
+    .nav > li:first-child > a, .nav > li:first-child > a:hover {
+      .border-radius(0);
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  /* Adjust the jumbotron */
+  .jumbotron{
+    h1, p {
+      text-align: center;
+      margin-right: 0;
+    }
+    h1 {
+      font-size: 45px;
+      margin-right: 0;
+    }
+    p {
+      margin-right: 0;
+      margin-left: 0;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .btn {
+      display: block;
+      font-size: 18px;
+      padding: 10px 14px;
+      margin: 0 auto 10px;
+    }
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  /* Jumbotron buttons */
+  .jumbotron .btn {
+    margin-bottom: 10px;
+  }
+
+  /* Subnav */
+  .subnav {
+    position: static;
+    top: auto;
+    z-index: auto;
+    width: auto;
+    height: auto;
+    background: #fff; /* whole background property since we use a background-image for gradient */
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow:none;
+    -ms-box-shadow:none;
+    box-shadow: none;
+    .nav > li {
+      float: none;
+    }
+    .nav > li > a {
+      border: 0;
+    }
+    .nav > li + li > a {
+      border-top: 1px solid #e5e5e5;
+    }
+    .nav > li:first-child > a, .nav > li:first-child > a:hover {
+      .border-radius(4px 4px 0 0);
+    }
+  }
+
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+  /* Scale down the jumbotron content */
+  .jumbotron{
+    h1 {
+      font-size: 54px;
+    }
+    p {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 980px) {
+
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  /* Scale down the jumbotron content */
+  .jumbotron h1 {
+    font-size: 72px;
+  }
+
+}
+
+/* LARGE DESKTOP SCREENS */
+@media (min-width: 1210px) {
+
+  /* Update subnav container */
+  .subnav-fixed .nav {
+    width: 1168px; /* 2px less to account for left/right borders being removed when in fixed mode */
+  }
+
+}
+
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #e5e5e5;
+  
+  p {
+    margin-bottom: 0;
+    color: #555;
+  }
+}
+
+#modules{
+  margin: 0 auto;
+  width: 990px;
+  text-align: center;
+  
+  li{
+    display: inline-block;
+    margin: 0 50px 30px 0;
+    background: #ededed;
+    padding: 8px;
+    .border-radius(8px);
+  }
+  li h2{
+    text-align:center;
+    margin-top: 10px;
+  }
+}
+
+#login-box{
+  background: #ededed;
+  padding: 8px;
+  .border-radius(8px);
+  width: 375px;
+  min-height: 120px;
+  margin: 0 auto;
+  display: block;
+  
+  h1{
+    color: #666;
+    margin-bottom: 20px;
+  }
+  form{
+    background: #fff url(../img/brasao.big.transparent.gif) no-repeat center 15px;
+    padding: 30px 20px 20px;
+    .border-radius(8px);
+    border: 1px solid #ddd;
+    margin: 0px;
+    
+    legend{
+      border-bottom: none;
+    }
+    input[type="text"], input[type="password"] {
+      font-size:18px;
+      width:94%;
+      .border-radius(6px);
+      padding:10px 5px;
+      margin: 2px auto 15px auto;
+      border:4px solid #f2f5f7;
+      color: #888;
+      background:#fbfbfb;
+      .box-shadow(0px 0px 3px #b9bdbf inset);
+    }
+    input:focus{
+      border:4px solid #e0f1fc;
+      .box-shadow(0px 0px 3px #65b3cc inset);
+    }
+    select.span3{
+      width: 334px;
+    }
+    .form-actions{
+      padding: 10px 20px 11px;
+    }
+  }
+}
+
+.button-green{
+  background: #A0CA74;
+  border: 1px solid #78956D;
+  .text-shadow(1px 1px 0px #80A25D);
+  .border-radius(3px);
+  color: #fff;
+  padding: 10px;
+  display: block;
+
+  &:hover{
+    background: #8eb861;
+    .text-shadow(1px 1px 0px #678945);
+    border: 1px solid #5c7e4f;
+  }
+}
+
+.button-red{
+  margin: 0 0 0 10px;
+  background: desaturate(#d07f7f, 10%);
+  border: 1px solid #875757;
+  .text-shadow(1px 1px 0px #a66666);
+  .border-radius(3px);
+  color: #fff;
+  padding: 10px;
+  display: block;
+
+  &:hover{
+    background: #ba6767;
+    .text-shadow(1px 1px 0px #914c4c);
+    border: 1px solid #7a4444;
+  }
+}
+
+.notification{
+  position: absolute;
+  .border-radius(30px);
+  display: inline-block;
+  padding: 3px;
+  font-size: 9px;
+  color: #f2f2f2;
+  left: 20px;
+  top: 3px;
+  background-color: #b94a48;
+  border: 1px solid #fff;
+  line-height: 6px;
+}
+#email-format{
+  font-size:18px;
+  display: none;
+}
+#eleicoes-select{
+  width: 70px;
+  vertical-align: middle!important;
+  margin-top: 7px;
+}
+
+#mobile-widgets-nav{
+  display: none;
+}
+@import "widgets";
+
+//comportamento das widgets no ipad em paisagem
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  @import "widgets-ipad-landscape";
+}
+
+//comportamento das widgets no ipad em retrato
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait),
+(max-width: 800px){
+  @import "widgets-ipad-portrait";
+}
+
+@import "sidebar";
+@import "autosuggest";
+@import "chosen";
