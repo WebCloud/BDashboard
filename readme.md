@@ -1,4 +1,4 @@
-#BDashboard - A Twitter Bootstrap Dashboard
+#BDashboard - A basic and clean, yet functional, dashboard made with twitter bootstrap
 
 ##Overview
 A super simple, yet amazing to use, dashboard, based on [Twitter Bootstrap](twitter.github.com/bootstrap/)! This dashboard was originally designed and coded to a internal project that worked, and I decided to open source it. So you can use it as you want, and change it as you need. But you must notice that:
