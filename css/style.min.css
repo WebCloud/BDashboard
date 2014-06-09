@@ -7842,68 +7842,6 @@ a.on-off.disabled .mini-switch-replace {
   background: #e9e9e9;
   border-left: 10px solid #9ad8ea;
 }
-.settings .settings-row .btn-opt-filtro {
-  background-color: whiteSmoke;
-  background-color: #f1f1f1;
-  /* Old browsers */
-
-  background-repeat: repeat-x;
-  /* Repeat the gradient */
-
-  background-image: -moz-linear-gradient(top, whiteSmoke 0%, #f1f1f1 100%);
-  /* FF3.6+ */
-
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whiteSmoke), color-stop(100%, #f1f1f1));
-  /* Chrome,Safari4+ */
-
-  background-image: -webkit-linear-gradient(top, whiteSmoke 0%, #f1f1f1 100%);
-  /* Chrome 10+,Safari 5.1+ */
-
-  background-image: -ms-linear-gradient(top, whiteSmoke 0%, #f1f1f1 100%);
-  /* IE10+ */
-
-  background-image: -o-linear-gradient(top, whiteSmoke 0%, #f1f1f1 100%);
-  /* Opera 11.10+ */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0);
-  /* IE6-9 */
-
-  background-image: linear-gradient(top, whiteSmoke 0%, #f1f1f1 100%);
-  /* W3C */
-
-  color: #444;
-}
-.settings .settings-row .btn-opt-filtro.btn-success.active {
-  background-color: #3d9400;
-  background-color: #398a00;
-  /* Old browsers */
-
-  background-repeat: repeat-x;
-  /* Repeat the gradient */
-
-  background-image: -moz-linear-gradient(top, #3d9400 0%, #398a00 100%);
-  /* FF3.6+ */
-
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3d9400), color-stop(100%, #398a00));
-  /* Chrome,Safari4+ */
-
-  background-image: -webkit-linear-gradient(top, #3d9400 0%, #398a00 100%);
-  /* Chrome 10+,Safari 5.1+ */
-
-  background-image: -ms-linear-gradient(top, #3d9400 0%, #398a00 100%);
-  /* IE10+ */
-
-  background-image: -o-linear-gradient(top, #3d9400 0%, #398a00 100%);
-  /* Opera 11.10+ */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0);
-  /* IE6-9 */
-
-  background-image: linear-gradient(top, #3d9400 0%, #398a00 100%);
-  /* W3C */
-
-  color: white;
-}
 .settings.open {
   display: block;
 }

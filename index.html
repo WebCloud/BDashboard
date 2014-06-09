@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="widgets">
+  <head>
+    <meta charset="utf-8">
+    <title>SAURON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="SAURON">
+    <meta name="author" content="Vinicius Teixeira Dallacqua - SESAW">
+    <style>[ng\:cloak], [ng-cloak], .ng-cloak {display: none!important}</style>
+    
+    <style type="text/css">
+      body{
+        padding-top: 85px;
+      }
+    </style>
+    <!-- Le styles -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div id="logo-dropdown" class="dropdown">
+            <a class="brand" data-toggle="dropdown" href="#">
+              <img class="logo" src="img/brasao.gif" width="20" />SAURON <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><img src="img/brasao.gif" width="15" height="15" align="left" style="margin: 1px 5px 0 0;"> Um módulo aqui</a></li>
+              <li><a href="#"><img src="img/brasao.gif" width="15" height="15" align="left" style="margin: 1px 5px 0 0;"> Um módulo aqui</a></li>
+              <li><a href="#"><img src="img/brasao.gif" width="15" height="15" align="left" style="margin: 1px 5px 0 0;"> Um módulo aqui</a></li>
+              <li><a href="#"><img src="img/brasao.gif" width="15" height="15" align="left" style="margin: 1px 5px 0 0;"> Um módulo aqui</a></li>
+            </ul>
+          </div> <!-- /#logo-dropdown -->
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Notificações"><i class="icon-envelope icon-white"></i> <b class="caret"></b></a> <span class="notification">1</span>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Uma Notificação aqui</a></li>
+                  <li><a href="#">Uma Notificação aqui</a></li>
+                  <li><a href="#">Uma Notificação aqui</a></li>
+                  <li><a href="#">Uma Notificação aqui</a></li>
+                  <li><a href="#" style="text-align:center">ler mais</a></li>
+                </ul>
+              </li>
+            </ul> <!-- /.nav -->
+            <ul class="nav pull-right">
+              <!-- <li>
+                <button class="btn btn-homologar">Homologar este local de transmissão</button>
+              </li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Bem vindo, Fulano <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">item extra</a></li>
+                  <li><a href="#">item extra</a></li>
+                  <li><a href="#">item extra</a></li>
+                  <li><a href="#">item extra</a></li>
+                </ul>
+              </li>
+              <li>
+                <select id="eleicoes-select">
+                  <option value="2012">2012</option>
+                  <option value="2010">2010</option>
+                </select>
+              </li>
+            </ul> <!-- /.nav.pull-right -->
+          </div> <!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row" style="height: 650px; position: relative;">
+        <div id="sidebar-toggle"><a href="#" class="btn btn-mini"><i class="icon-caret-left"></i> <i class="icon-comment-alt"></i></a></div>
+        <div class="span2" id="sidebar">
+          <h3>Mensagens</h3>
+          <div id="messages">
+            <div class="message pull-left">
+              <h5>Cicrano de Tal <span class="date">12/02/12</span></h5>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <div class="message pull-right">
+              <h5>Fulano de tal <span class="date">12/02/12</span></h5>
+              Lorem ipsum dolor sit amet.
+            </div>
+            <div class="message pull-left">
+              <h5>Cicrano de Tal <span class="date">12/02/12</span></h5>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <div class="message pull-right">
+              <h5>Fulano de tal <span class="date">12/02/12</span></h5>
+              Lorem ipsum dolor sit amet.
+            </div>
+            <div class="message pull-right">
+              <h5>Fulano de tal <span class="date">12/02/12</span></h5>
+              Lorem ipsum dolor sit amet.
+            </div>
+            <div class="message pull-left">
+              <h5>Cicrano de Tal <span class="date">12/02/12</span></h5>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <div class="message pull-left">
+              <h5>Cicrano de Tal <span class="date">12/02/12</span></h5>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <div class="message pull-left">
+              <h5>Cicrano de Tal <span class="date">12/02/12</span></h5>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <a href="#" class="btn btn-load-more" style="margin-left: 63px;">carregar mais</a>
+          </div> <!-- /#messages -->
+          <div id="message-form">
+            <form action="#">
+              <div class="control-group">
+                <div class="controls">
+                  <input type="text" class="iput-xlarge">
+                  <textarea placeholder="envie uma mensagem"></textarea>
+                  <button class="btn btn-primary">enviar</button>
+                </div>
+              </div>
+            </form>
+          </div> <!-- /#message-form -->
+        </div> <!-- /#sidebar -->
+        
+        <div class="span9 widgets">
+          <div id="mobile-widgets-nav">
+            <a href="#" class="btn btn-prev disabled"><i class="icon-chevron-left"></i></a>
+            <a href="#" class="btn btn-next"><i class="icon-chevron-right"></i></a>
+            <div id="pages">
+              <span class="current">.</span>
+              <span>.</span>
+              <span>.</span>
+              <span>.</span>
+            </div>
+          </div>
+          <div class="row">
+        
+            <div class="widget-transmissao current span4">
+            
+              <div class="loading">
+                <div class="loader">
+                	<img src="img/loading.gif" />
+                </div>
+              </div>
+        
+              <div class="powers">
+                <h2>Locais de Transmissão</h2>
+                <a href="#" class="settings-nub" title="Configurações">
+                  <i class="icon-cog"></i>
+                </a>
+                <a href="#" class="expander" title="Expandir">
+                  <i class="icon-fullscreen"></i>
+                </a>
+              </div> <!-- /.powers -->
+              
+              <div class="form-actions">
+          	  		<a class="on-off btn btn-large pull-left online" data-toggle="button" data-trans-status="online" href="#"><input type="checkbox" name="complex-switch-on" id="complex-switch-on" value="1" class="mini-switch"> Online</a>
+          	  		<a class="on-off btn btn-large pull-right offline" data-toggle="button" data-trans-status="offline" href="#"><input type="checkbox" name="complex-switch-on" id="complex-switch-on" value="1" class="mini-switch"> Offline</a>
+          	  	</ul>
+              </div>
+              
+              <div class="code-wrap transmissao">
+                <ul class="nav nav-pills nav-stacked has-item-options">
+                  <li data-trans-status="online">
+                    <a href="#">
+                      <span class="label label-success" rel="tooltip" title="Homologado">H</span> 
+                      301 - Miracema - Colégio Professor X
+                    </a>
+                    <div class="item-options clearfix">
+                      <a href="#" class="btn btn-success btn-small pull-left option-open">Liberar</a>
+                      <a href="#visualizarPessoas" data-toggle="modal" data-type="transmissao" class="btn btn-large" rel="tooltip" title="Listade técnicos"><i class="icon-user"></i></a>
+                      <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-right" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                    </div>
+                  </li>
+                  <li data-trans-status="offline">
+                    <a href="#">
+                      <span class="label label-important" rel="tooltip" title="Homologado">H</span>
+                      134 - Ponte Alta - Escola Polegar Vermelho
+                    </a>
+                    <div class="item-options clearfix">
+                      <a href="#" class="btn btn-success btn-small pull-left option-open">Liberar</a>
+                      <a href="#visualizarPessoas" data-toggle="modal" data-type="transmissao" class="btn btn-large" rel="tooltip" title="Listade técnicos"><i class="icon-user"></i></a>
+                      <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-right" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                    </div>
+                  </li>
+                  <li data-trans-status="online">
+                    <a href="#">
+                      <span class="label label-success" rel="tooltip" title="Liberado">L</span>
+                      014 - Palmas - Colégio Comecinho do Sith
+                      <div class="item-options clearfix">
+                        <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-left" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                      </div>
+                    </a>
+                  </li>
+                  <li data-trans-status="offline">
+                    <a href="#">
+                      <span class="label label-important" rel="tooltip" title="Não homologado">N</span>
+                      008 - Porto Nacional - Darth Vader II
+                    </a>
+                    <div class="item-options clearfix">
+                      <a href="#" class="btn btn-success btn-small pull-left option-open">Liberar</a>
+                      <a href="#visualizarPessoas" data-toggle="modal" data-type="transmissao" class="btn btn-large" rel="tooltip" title="Listade técnicos"><i class="icon-user"></i></a>
+                      <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-right" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                    </div>
+                  </li>
+                  <li data-trans-status="offline">
+                    <a href="#">
+                      <span class="label label-important" rel="tooltip" title="Não homologado">N</span>
+                      015- Araguaína - Colégio Cantinho da Fênix
+                    </a>
+                    <div class="item-options clearfix">
+                      <a href="#" class="btn btn-success btn-small pull-left option-open">Liberar</a>
+                      <a href="#visualizarPessoas" data-toggle="modal" data-type="transmissao" class="btn btn-large" rel="tooltip" title="Listade técnicos"><i class="icon-user"></i></a>
+                      <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-right" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                    </div>
+                  </li>
+                  <li data-trans-status="offline">
+                    <a href="#">
+                      <span class="label label-important" rel="tooltip" title="Liberado">L</span>
+                      006 - Araguaína - Escola Primária Zézinho
+                      <div class="item-options clearfix">
+                        <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-left" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                      </div>
+                    </a>
+                  </li>
+                  <li data-trans-status="online">
+                    <a href="#">
+                      <span class="label label-success" rel="tooltip" title="Aguardando">A</span>
+                      014 - Palmas - Colégio 9 de Novembro
+                    </a>
+                    <div class="item-options clearfix">
+                      <a href="#" class="btn btn-success btn-small pull-left option-open">Liberar</a>
+                      <a href="#visualizarPessoas" data-toggle="modal" data-type="transmissao" class="btn btn-large" rel="tooltip" title="Listade técnicos"><i class="icon-user"></i></a>
+                      <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-right" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                    </div>
+                  </li>
+                  <li data-trans-status="online">
+                    <a href="#">
+                      <span class="label label-success" rel="tooltip" title="Aguardando">A</span>
+                      014 - Palmas - Colégio Great Scott
+                    </a>
+                    <div class="item-options clearfix">
+                      <a href="#" class="btn btn-success btn-small pull-left option-open">Liberar</a>
+                      <a href="#visualizarPessoas" data-toggle="modal" data-type="transmissao" class="btn btn-large" rel="tooltip" title="Listade técnicos"><i class="icon-user"></i></a>
+                      <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-right" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                    </div>
+                  </li>
+                  <li data-trans-status="online">
+                    <a href="#">
+                      <span class="label label-success" rel="tooltip" title="Aguardando">A</span>
+                      014 - Palmas - Colégio Doc Emmett Brown
+                    </a>
+                    <div class="item-options clearfix">
+                      <a href="#" class="btn btn-success btn-small pull-left option-open">Liberar</a>
+                      <a href="#visualizarPessoas" data-toggle="modal" data-type="transmissao" class="btn btn-large" rel="tooltip" title="Listade técnicos"><i class="icon-user"></i></a>
+                      <a href="#visualizarDetalhesLocalTransmissao" data-toggle="modal" class="btn btn-large pull-right" rel="tooltip" title="Visualizar locais atendidos" style="margin-left: 0;"><i class="icon-map-marker"></i></a>
+                    </div>
+                  </li>
+                </ul> <!-- /.nav.has-item-options -->
+              </div> <!-- /.code-wrap.transmissao -->
+              
+              <a href="#" class="btn btn-large btn-load-more">Carregar mais</a>
+
+              <div class="settings">
+        
+                <form class="settings-row clearfix">
+                  <div class="control-group">
+                    <div class="controls">
+                      <input type="text" class="autocomplete" />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <div class="btn-group" data-toggle="buttons-radio">
+                        <button class="btn btn-info">Homologado</button>
+                        <button class="btn btn-info">Não homologado</button>
+                        <button class="btn btn-info">Liberado</button>
+                        <button class="btn btn-info">Aguardando</button>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-info pull-right btn-filtro">Filtrar</button>
+                </form>
+        
+              </div> <!-- /.settings -->
+        
+            </div> <!-- /.widget-transmissao -->
+        
+            <div class="widget-ocorrencia span4" ng-controller="OcorrenciaCtrl">
+              <widget lvl-objs="lvlObjs">
+                
+                <div class="loading">
+                  <div class="loader">
+                  	<img src="img/loading.gif" />
+                  </div>
+                </div>
+          
+                <div class="powers">
+
+                  <h2>Ocorrências</h2>
+                  <a href="#" class="settings-nub" title="Configurações">
+                    <i class="icon-cog"></i>
+                  </a>
+                  <a href="#" class="expander" title="Expandir">
+                    <i class="icon-fullscreen"></i>
+                  </a>
+                </div> <!-- /.powers -->
+              
+                <div class="code-wrap" ng-show="lvlObjs.length" ng-cloak>
+                  <div class="step-1 current">
+                    <h3>Municípios</h3>
+                    <ul class="nav nav-pills nav-stacked has-item-options hover-inverse">
+                      <li ng-repeat="mun in lvlObjs" id="{{mun.id}}" ng-class="{'falta-mesario': mun.mesario, parada: mun.parada}">
+                        <a href="#">
+                          <span class="link-text">{{mun.nome}}</span>
+                          <span class="badge pull-right">{{mun.cont}}</span>
+                          <span class="label pull-right stat-label" ng-show="mun.mesario || mun.parada" ng-cloak>{{statLabel || mun.parada}}</span>
+
+                        </a>
+                        <div class="item-options clearfix">
+                          <a href="#visualizarPessoas" data-toggle="modal" data-type="municipio" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste município"><i class="icon-user"></i></a>
+                          <a href="#" ng-click="enter(mun,'local')" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste município"><i class="icon-circle-arrow-right"></i></a>
+                        </div>
+                      </li>
+                    </ul> <!-- /.nav.has-item-options.hover-inverse -->
+                  </div> <!-- /.step-1 -->
+                  
+                  <div class="step-2" ng-show="lvlObjs.length" ng-cloak>
+                    <a href="#" ng-click="leave('local')" class="btn btn-small pull-left btn-prev clearfix" rel="tooltip" title="Voltar para município"><i class="icon-circle-arrow-left"></i></a>
+                    <h3>
+                      Locais
+                      <span class="current-place-label">{{curParent}}</span>
+                    </h3>
+                    <ul class="nav nav-pills nav-stacked has-item-options hover-inverse">
+                      <li ng-repeat="local in lvlObjs" id="{{local.id}}" ng-class="{'falta-mesario': local.mesario, parada: local.parada}">
+                        <a href="#">
+                          <span class="link-text">{{local.nome}}</span>
+                          <span class="badge pull-right">{{local.cont}}</span>
+                          <span class="label pull-right stat-label" ng-show="local.mesario || local.parada" ng-cloak>{{statLabel || local.parada}}</span>
+                        </a>
+                        <div class="item-options clearfix">
+                          <a href="#cadastrarOcorrencia" data-toggle="modal" class="btn btn-large pull-left" rel="tooltip" title="Adicionar ocorrência para este local"><i class="icon-plus"></i></a>
+                          <a href="#visualizarPessoas" data-toggle="modal" data-type="local" class="btn btn-large user-list" rel="tooltip" title="Visualizar equipe deste local"><i class="icon-user"></i></a>
+                          <a href="#" ng-click="enter(local, 'secao')" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste local"><i class="icon-circle-arrow-right"></i></a>
+                        </div>
+                      </li>
+                    </ul> <!-- /.nav.has-item-options.hover-inverse -->
+                  </div> <!-- /.step-2 -->
+                  
+                  <div class="step-3" ng-show="lvlObjs.length" ng-cloak>
+                    <a href="#" ng-click="leave('secao')" class="btn btn-small pull-left btn-prev clearfix" rel="tooltip" title="Voltar para local"><i class="icon-circle-arrow-left"></i></a>
+                    <a href="#" ng-click="notDivide()" class="btn btn-small pull-right btn-divide clearfix" ng-hide="divided" rel="tooltip" data-type="ocorrencia" title="Não dividir por seções"><i class="icon-reorder"></i></a>
+                    <a href="#" ng-click="divide()" class="btn btn-small pull-right btn-divide clearfix" ng-show="divided" ng-cloak data-type="ocorrencia" rel="tooltip" title="Dividir por seções"><i class="icon-columns"></i></a>
+                    <h3>
+                      {{curLvl || 'Seções'}}
+                      <span class="current-place-label">{{curParent}}</span>
+                    </h3>
+                    <ul class="nav nav-pills nav-stacked has-item-options hover-inverse">
+                      <li ng-repeat="secao in lvlObjs" id="{{secao.id}}" ng-class="{'falta-mesario': secao.mesario, parada: secao.parada}" ng-switch on="secao.num != null">
+                        <a href="#" ng-click="viewIssue(secao)">
+                          <span class="link-text">{{secao.num || secao.altTitulo}}</span>
+                          <span class="badge pull-right" ng-show="secao.cont">{{secao.cont}}</span>
+                          <span class="label pull-right stat-label" ng-show="secao.mesario || secao.parada" ng-cloak>{{statLabel || secao.parada}}</span>
+                        </a>
+                        <div ng-switch-when="true" class="item-options clearfix" ng-show="secao.num" ng-cloak>
+                          <a href="#cadastrarOcorrencia" data-toggle="modal" class="btn btn-large pull-left" rel="tooltip" title="Adicionar ocorrência para esta seção"><i class="icon-plus"></i></a>
+                          <a href="#visualizarPessoas" data-toggle="modal" data-type="secao" class="btn btn-info btn-large user-list" rel="tooltip" title="Visualizar mesários desta seção"><i class="icon-user"></i></a>
+                          <a href="#" ng-click="enter(secao, 'ocorrencia')" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar nesta seção"><i class="icon-circle-arrow-right"></i></a>
+                        </div>
+                      </li>
+                    </ul> <!-- /.nav.has-item-options.hover-inverse -->
+                  </div> <!-- /.step-3 -->
+                  
+                  <div class="step-4" ng-show="lvlObjs.length" ng-cloak>
+                    <a href="#" ng-click="leave('ocorrencia')" class="btn btn-small pull-left btn-prev clearfix" rel="tooltip" title="Voltar para seção"><i class="icon-circle-arrow-left"></i></a>
+                    <h3>
+                      Ocorrências
+                      <span class="current-place-label">{{curParent}}</span>
+                    </h3>
+                    <ul class="nav nav-pills nav-stacked hover-inverse">
+                      <li ng-repeat="ocorrencia in lvlObjs" id="{{ocorrencia.id}}" ng-class="{'falta-mesario': ocorrencia.mesario, parada: ocorrencia.parada}">
+                        <a href="#visualizarOcorrencia" ng-click="viewIssue(ocorrencia)">
+                          <span class="label label-icon" rel="tooltip" title="chamado aberto"><i class="icon-check-empty"></i></span>
+                          <span class="link-text">{{ocorrencia.titulo}}</span>
+                          <span class="label pull-right stat-label" ng-show="ocorrencia.mesario || ocorrencia.parada" ng-cloak>{{statLabel || ocorrencia.parada}}</span>
+                        </a>
+                      </li>
+                    </ul> <!-- /.nav.hover-inverse -->
+                    <a href="#" class="btn btn-large btn-load-more">Carregar mais</a>
+                  </div> <!-- /.step-4 -->
+                </div> <!-- /.code-wrap -->
+
+                <div class="modal fade hide" id="visualizarOcorrencia">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3>{{ocorrencia.titulo}}</h3>
+                    <span class="label stat-label ng-class:{'label-warning': ocorrencia.mesario, 'label-important': ocorrencia.parada}" ocorrencia="ocorrencia" ng-show="ocorrencia.mesario || ocorrencia.parada" ng-cloak>{{statLabel || ocorrencia.parada}}</span>
+                  </div>
+                  <div class="modal-body">
+                    <p><b>Zona X - {{parentsNames[0]}} - {{parentsNames[1] || curParent}} - {{ ocorrencia.parentName ||curParent}}</b></p>
+                    <p><b>Informante:</b> <span class="inform">{{ocorrencia.informante}}</span> <a href="#" class="btn btn-micro btn-danger btn-block"><i class="icon-lock"></i> bloquear</a></p>
+                    <p>{{ocorrencia.descricao}}</p>
+                    <div class="team">
+                      <div class="current" data-type="team">
+                        <span class="current-team">Sem equipe delegada</span>
+                        <a href="#" class="btn open-mini-form">delegar</a>
+                      </div>
+                      <div class="choose-mini-form hide">
+                        <a class="close" href="#">&times;</a>
+                        <select class="input-small" id="secao">
+                          <option value="">Escolher equipe</option> 
+                          <option value="Equipe A">Equipe A</option> 
+                          <option value="Equipe B">Equipe B</option>
+                          <option value="Equipe C">Equipe C</option>
+                        </select>
+                        <a href="#" class="btn btn-small close-mini-form">delegar</a>
+                      </div>
+                    </div> <!-- /.team -->
+                    <div class="problem">
+                      <div class="current" data-type="problem">
+                        <label class="checkbox inline open-mini-form" style="margin-left: 25px;">
+                          <input type="checkbox" id="inlineCheckbox1" value="option1"> problema de urna
+                        </label>
+                      </div>
+                      <div class="choose-mini-form hide">
+                        <a class="close" href="#">&times;</a>
+                        <select class="input-small" id="secao">
+                          <option value="">Tipo de problema</option> 
+                          <option value="urna_nao_liga">urna não liga</option>
+                          <option value="urna_com_bateria_fraca">urna com bateria fraca</option>
+                        </select>
+                        <a href="#" class="btn btn-small close-mini-form">modificar</a>
+                      </div>
+                    </div> <!-- /.problem -->
+                  </div> <!-- /.modal-body -->
+                  <div class="modal-footer">
+                    <div class="tabbable tabs-below">
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                          <form action="#">
+                            <textarea class="input-xlarge" id="descricao" rows="3" style="width: 520px;" placeholder="Detalhamento da ação realizada..."></textarea>
+                            <div class="operations">
+                              <label class="checkbox inline" style="margin-left: 25px;">
+                                <input type="checkbox" class="resolved" id="inlineCheckbox1" value="option1"> resolvido
+                              </label>
+                              <label class="checkbox inline" style="margin: 0 25px;">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> duplicado
+                              </label>
+                              <a href="#" class="btn btn-primary send-info" data-dismiss="modal" data-dismiss="modal">Enviar</a>
+                            </div>
+                          </form>
+                        </div> <!-- /#tab1 -->
+                        <div class="tab-pane" id="tab2">
+                          <div class="entries">
+                            <h4>Assentamentos <a href="#" class="btn btn-micro btn-info btn-refresh"><i class="icon-refresh"></i> atualizar</a></h4>
+                            <ul>
+                              <li>
+                                <span class="date">10/12/2012 13:20</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              </li>
+                              <li>
+                                <span class="date">10/12/2012 13:20</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div> <!-- /#tab2 -->
+                      </div>
+                      <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1" data-toggle="tab">Registrar assentamento</a></li>
+                        <li><a href="#tab2" data-toggle="tab">Assentamentos</a></li>
+                      </ul> <!-- /.nav.nav-tabs -->
+                    </div>
+                  </div> <!-- /.modal-footer -->
+                </div> <!-- /.modal#visualizarOcorrencia -->
+                <div class="settings">
+                
+                  <form class="settings-row clearfix">
+                    <div class="control-group">
+                      <div class="controls">
+                        <input type="text" class="autocomplete" />
+                        <p class="help-block">Buscar por local, zona ou texto/título da ocorrência</p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="controls">
+                        <div class="btn-group" data-toggle="buttons-radio">
+                          <button class="btn btn-danger">abertas</button>
+                          <button class="btn btn-danger">paradas</button>
+                          <button class="btn btn-danger">fechadas</button>
+                          <button class="btn btn-danger">falta mesário</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-danger pull-right btn-filtro">Filtrar</button>
+                  </form>
+          
+                </div> <!-- /.settings -->
+              
+              </widget>
+            </div> <!-- /.widget-ocorrencia -->
+        
+          </div> <!-- /.row -->
+          
+          <div class="row">
+          
+            <div class="widget-totalizacao span4">
+            
+              <div class="loading">
+                <div class="loader">
+                  <img src="img/loading.gif" />
+                </div>
+              </div>
+        
+              <div class="powers">
+                <h2>Totalização de BUs</h2>
+                <a href="#" class="settings-nub" title="Configurações">
+                  <i class="icon-cog"></i>
+                </a>
+                <a href="#" class="expander" title="Expandir">
+                  <i class="icon-fullscreen"></i>
+                </a>
+              </div> <!-- /.powers -->
+              
+              <div class="code-wrap">
+                <div class="step-1 current">
+                  <h3>Municípios</h3>
+                  <ul class="nav nav-pills nav-stacked has-item-options hover-inverse">
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Município A</span>
+                        <div class="progress progress-info pull-right">
+                          <div class="bar" style="width: 60%;">
+                            <span>120 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="municipio" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste município"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste município"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Município B</span>
+                        <div class="progress progress-success pull-right">
+                          <div class="bar" style="width: 80%;">
+                            <span>200 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="municipio" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste município"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste município"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Município C</span>
+                        <div class="progress progress-info pull-right">
+                          <div class="bar" style="width: 60%;">
+                            <span>120 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="municipio" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste município"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste município"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Município D</span>
+                        <div class="progress progress-warning pull-right">
+                          <div class="bar" style="width: 30%;">
+                            <span>80 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="municipio" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste município"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste município"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Município E</span>
+                        <div class="progress progress-danger pull-right">
+                          <div class="bar" style="width: 10%;">
+                            <span>22 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="municipio" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste município"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste município"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                  </ul> <!-- /.nav.has-item-options.hover-inverse -->
+                </div> <!-- /.step-1 -->
+                
+                <div class="step-2">
+                  <a href="#" class="btn btn-small pull-left btn-prev clearfix" rel="tooltip" title="Voltar para município"><i class="icon-circle-arrow-left"></i></a>
+                  <a href="#" class="btn btn-small pull-right btn-divide clearfix" data-type="totalizacao" rel="tooltip" title="Não dividir por locais"><i class="icon-reorder"></i></a>
+                  <a href="#" class="btn btn-small pull-right btn-divide clearfix not-divided" data-type="totalizacao" rel="tooltip" title="Dividir por locais"><i class="icon-columns"></i></a>
+                  <h3>
+                    Locais
+                    <span class="current-place-label">Município A</span>
+                  </h3>
+                  <ul class="nav nav-pills nav-stacked has-item-options hover-inverse">
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Escola A</span>
+                        <div class="progress progress-info pull-right">
+                          <div class="bar" style="width: 60%;">
+                            <span>120 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="local" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste local"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste local"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Escola B</span>
+                        <div class="progress progress-success pull-right">
+                          <div class="bar" style="width: 80%;">
+                            <span>200 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="local" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste local"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste local"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Escola C</span>
+                        <div class="progress progress-info pull-right">
+                          <div class="bar" style="width: 60%;">
+                            <span>120 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="local" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste local"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste local"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" rel="tooltip" title="Escola Whatever The Hell they want to name this freaking school D">
+                        <span class="link-text">Escola Whatever The Hell they want to name this freaking school D</span>
+                        <div class="progress progress-warning pull-right">
+                          <div class="bar" style="width: 30%;">
+                            <span>80 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="local" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste local"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste local"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Escola E</span>
+                        <div class="progress progress-danger pull-right">
+                          <div class="bar" style="width: 10%;">
+                            <span>22 de 220</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="local" class="btn btn-large pull-left" rel="tooltip" title="Visualizar equipe deste local"><i class="icon-user"></i></a>
+                        <a href="#" class="btn btn-large pull-right btn-next" rel="tooltip" title="Entrar neste local"><i class="icon-circle-arrow-right"></i></a>
+                      </div>
+                    </li>
+                  </ul> <!-- /.nav.has-item-options.hover-inverse -->
+                </div> <!-- /.step-2 -->
+                
+                <div class="step-3">
+                  <a href="#" class="btn btn-small pull-left btn-prev clearfix" rel="tooltip" title="Voltar para local"><i class="icon-circle-arrow-left"></i></a>
+                  <h3>
+                    Seções
+                    <span class="current-place-label">Escola Whatever The Hell they want to name this freaking school D</span>
+                  </h3>
+                  <ul class="nav nav-pills nav-stacked has-item-options hover-inverse">
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Seção A</span>
+                        <span class="label pull-right">não recebida</span>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="secao" class="btn btn-info btn-large pull-left" rel="tooltip" title="Visualizar mesários desta seção"><i class="icon-user"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Seção B</span>
+                        <span class="label pull-right">agregada</span>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="secao" class="btn btn-info btn-large pull-left" rel="tooltip" title="Visualizar mesários desta seção"><i class="icon-user"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Seção C</span>
+                        <span class="label pull-right">recebida</span>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="secao" class="btn btn-info btn-large pull-left" rel="tooltip" title="Visualizar mesários desta seção"><i class="icon-user"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Seção D</span>
+                        <span class="label pull-right">recebida</span>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="secao" class="btn btn-info btn-large pull-left" rel="tooltip" title="Visualizar mesários desta seção"><i class="icon-user"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Seção E</span>
+                        <span class="label pull-right">agregada</span>
+                      </a>
+                      <div class="item-options clearfix">
+                        <a href="#visualizarPessoas" data-toggle="modal" data-type="secao" class="btn btn-info btn-large pull-left" rel="tooltip" title="Visualizar mesários desta seção"><i class="icon-user"></i></a>
+                      </div>
+                    </li>
+                  </ul> <!-- /.nav.has-item-options.hover-inverse -->
+                </div> <!-- /.step-3 -->
+              </div> <!-- /.code-wrap -->
+        
+              <div class="settings">
+        
+                <form class="settings-row clearfix">
+                  <div class="control-group">
+                    <div class="controls">
+                      <input type="text" class="autocomplete" />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <div class="btn-group" data-toggle="buttons-radio">
+                        <button class="btn btn-success">Não transmitidos</button>
+                        <button class="btn btn-success">Transmitidos</button>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-success pull-right btn-filtro">Filtrar</button>
+                </form>
+        
+              </div> <!-- /.settings -->
+        
+            </div> <!-- /.widget-totalizacao -->
+        
+            <div class="widget-corregedoria span4">
+            
+              <div class="loading">
+                <div class="loader">
+                  <img src="img/loading.gif" />
+                </div>
+              </div>
+        
+              <div class="powers">
+                <h2>Corregedoria</h2>
+                <a href="#" class="settings-nub" title="Configurações">
+                  <i class="icon-cog"></i>
+                </a>
+                <a href="#" class="expander" title="Expandir">
+                  <i class="icon-fullscreen"></i>
+                </a>
+              </div> <!-- /.powers -->
+              
+              <div class="code-wrap corregedoria">
+                <div class="step-1 current">
+                  <h3>Municípios</h3>
+                  <ul class="nav nav-pills nav-stacked hover-inverse">
+                    <li>
+                      <a href="#" class="btn-next">
+                        <span class="link-text">Município A</span>
+                        <span class="badge pull-right">13</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn-next">
+                        <span class="link-text">Município B</span>
+                        <span class="badge pull-right">21</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn-next">
+                        <span class="link-text">Município C</span>
+                        <span class="badge pull-right">31</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn-next">
+                        <span class="link-text">Município D</span>
+                        <span class="badge pull-right">18</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn-next">
+                        <span class="link-text">Município E</span>
+                        <span class="badge pull-right">1</span>
+                      </a>
+                    </li>
+                  </ul> <!-- /.nav.hover-inverse -->
+                </div> <!-- /.step-1 -->
+                
+                <div class="step-2">
+                  <a href="#" class="btn btn-small pull-left btn-prev clearfix" rel="tooltip" title="Voltar para município"><i class="icon-circle-arrow-left"></i></a>
+                  <h3>
+                    Ocorrências
+                    <span class="current-place-label">Município A</span>
+                  </h3>
+                  <ul class="nav nav-pills nav-stacked hover-inverse">
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Desacato</span>
+                        <span class="badge pull-right">13</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Boca de urna</span>
+                        <span class="badge pull-right">21</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="link-text">Transporte indevido de eleitores</span>
+                        <span class="badge pull-right">31</span>
+                      </a>
+                    </li>
+                  </ul> <!-- /.nav.hover-inverse -->
+                </div> <!-- /.step-2 -->
+              </div> <!-- /.code-wrap.corregedoria -->
+              
+              <a href="#cadastrarOcorrenciaCorregedoria" class="btn btn-large btn-add-ocorrencia" data-toggle="modal">Adicionar ocorrência</a>
+
+              <div class="settings">
+        
+                <form class="settings-row clearfix">
+                  <div class="control-group">
+                    <div class="controls">
+                      <input type="text" class="autocomplete" />
+                    </div>
+                  </div>
+                  <button class="btn btn-warning pull-right btn-filtro">Filtrar</button>
+                </form>
+        
+              </div> <!-- /.settings -->
+        
+            </div> <!-- /.widget-corregedoria -->
+        
+          </div><!-- /.row -->
+        
+        </div> <!-- /.span9.widgets -->
+        
+      </div> <!-- /.row -principal- -->
+
+      <div class="modal fade hide" id="alterarDadosTransmissao">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h3>Alterar dados de homnologação</h3>
+        </div>
+        <div class="modal-body">                
+          <p>Caso seu local de transmissão atual seja diferente do seu local de transmissão homologado, favor indicar os novos dados.<br /><br /></p>
+
+          <form action="#" class="form-horizontal">
+            <div class="control-group">
+              <label for="municipio" class="control-label">Local de Transmissão</label>
+              <div class="controls"><input type="text" class="input-xlarge mun-autocomplete" placeholder="301 - Miracema - Colégio Professor X" id="nome" /></div>
+            </div>
+            <div class="control-group inline">
+              <label for="municipio" class="control-label">Kit de Transmissão</label>
+              <div class="controls">
+                <input type="text" id="nome" class="input-micro" placeholder="AS12331" />
+              </div>
+            </div>
+          </form>
+        </div> <!-- /.modal-body -->
+        <div class="modal-footer">
+          <a href="#" class="btn" data-dismiss="modal">Cancelar</a>
+          <a href="#" class="btn btn-primary" data-dismiss="modal">Alterar</a>
+        </div>
+      </div> <!-- /.modal#alterarDadosTransmissao -->
+
+      <div class="modal fade hide" id="confirmacaoHomologacao">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h3>Confirmação de homologação</h3>
+        </div>
+        <div class="modal-body">                
+          <p>Identifique o tipo de conexão deste local de transmissão.<br /><br /></p>
+
+          <form action="#" class="form-horizontal">
+            <div class="control-group">
+              <label for="municipio" class="control-label">Tipo de conexão</label>
+              <div class="controls">
+                <label class="radio">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                  SMSAT
+                </label>
+                <label class="radio">
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  UPN
+                </label>
+                <label class="radio">
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  discada
+                </label>
+                <label class="radio">
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  rede JE
+                </label>
+              </div>
+            </div>
+          </form>
+        </div> <!-- /.modal-body -->
+        <div class="modal-footer">
+          <a href="#" class="btn" data-dismiss="modal">Confirmar</a>
+        </div>
+      </div> <!-- /.modal#confirmacaoHomologacao -->
+              
+      <div class="modal fade hide" id="cadastrarOcorrencia">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h3>Cadastrar ocorrência</h3>
+        </div>
+        <div class="modal-body">
+          <div class="common-issues">
+            <h4>Chamados abertos para este local</h4>
+            <div class="issues">
+              <ul class="nav nav-pills nav-stacked hover-inverse">
+                <li class="parada">
+                  <a href="#visualizarOcorrencia" data-toggle="modal" rel="tooltip" title="Chamado asdjalsjd lkjaklsjdas lkjklajsdlkjasd lkjklajsd asiudiausdu oiuaiosud oiuasd asdasd  A">
+                    <span class="label label-icon" rel="tooltip" title="chamado aberto"><i class="icon-check-empty"></i></span>
+                    <span class="link-text">Chamado asdjalsjd lkjaklsjdas lkjklajsdlkjasd lkjklajsd asiudiausdu oiuaiosud oiuasd asdasd  A</span>
+                    <span class="badge pull-right">21ª</span>
+                    <span class="label pull-right">parada</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#visualizarOcorrencia" data-toggle="modal">
+                    <span class="label label-icon" rel="tooltip" title="chamado aberto"><i class="icon-check-empty"></i></span>
+                    <span class="link-text">Chamado B</span>
+                    <span class="badge pull-right">21ª</span>
+                  </a>
+                </li>
+                <li class="falta-mesario">
+                  <a href="#visualizarOcorrencia" data-toggle="modal">
+                    <span class="label label-icon" rel="tooltip" title="chamado aberto"><i class="icon-check-empty"></i></span>
+                    <span class="link-text">Chamado C</span>
+                    <span class="badge pull-right">21ª</span>
+                    <span class="label pull-right">falta mesário</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#visualizarOcorrencia" data-toggle="modal">
+                    <span class="label label-icon" rel="tooltip" title="chamado aberto"><i class="icon-check-empty"></i></span>
+                    <span class="link-text">Chamado D</span>
+                    <span class="badge pull-right">21ª</span>
+                  </a>
+                </li>
+                <li class="falta-mesario">
+                  <a href="#visualizarOcorrencia" data-toggle="modal">
+                    <span class="label label-icon" rel="tooltip" title="chamado aberto"><i class="icon-check-empty"></i></span>
+                    <span class="link-text">Chamado E</span>
+                    <span class="badge pull-right">21ª</span>
+                    <span class="label pull-right">falta mesário</span>
+                  </a>
+                </li>
+              </ul> <!-- /.nav.hover-inverse -->
+            </div> <!-- /.issues -->
+          </div> <!-- /.common-issues -->
+        
+          <form action="#" class="form-horizontal">
+            <div class="control-group">
+              <label for="titulo" class="control-label">Título</label>
+              <div class="controls"><input type="text" class="input-xlarge" id="titulo" /></div>
+            </div>
+            <div class="control-group">
+              <label for="municipio" class="control-label">Município</label>
+              <div class="controls"><input type="text" class="input-xlarge" id="nome" /></div>
+            </div>
+            <div class="control-group">
+              <label for="local" class="control-label">Local</label>
+              <div class="controls">
+                <select class="chosen input-xlarge" data-placeholder="Escolha um local" id="local">
+                  <option value=""></option> 
+                  <option value="Escola A">Escola jhajlsdhlahslhdlas ljajlhsdas dljjlasdalsjdlajs llajsdlakjs A</option>
+                  <option value="Escola B">Escola B</option>
+                  <option value="Escola C">Escola C</option>
+                  <option value="Escola D">Escola D</option>
+                  <option value="Escola E">Escola E</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="secao" class="control-label">Seção</label>
+              <div class="controls">
+                <select class="chosen input-small" data-placeholder="Escolha uma" id="secao">
+                  <option value=""></option> 
+                  <option value="Secao A">Secao A</option>
+                  <option value="Secao B">Secao B</option>
+                  <option value="Secao C">Secao C</option>
+                  <option value="Secao D">Secao D</option>
+                  <option value="Secao E">Secao E</option>
+                </select>
+                <label class="checkbox inline" style="margin-left: 25px;">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1"> falta mesário
+                </label>
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="municipio" class="control-label">Informante</label>
+              <div class="controls">
+                <input type="text" id="nome" class="input-small" />
+                <label class="checkbox inline" style="margin-left: 25px;">
+                  <input type="checkbox" id="inlineCheckbox2" value="option1"> votação parada
+                </label>
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="descricao" class="control-label">Descrição</label>
+              <div class="controls"><textarea class="input-xlarge" id="descricao" rows="3"></textarea></div>
+            </div>
+          </form> <!-- /.form-horizontal -->
+        </div> <!-- /.modal-body -->
+        <div class="modal-footer">
+          <a href="#" class="btn" data-dismiss="modal">Cancelar</a>
+          <a href="#" class="btn btn-primary" data-dismiss="modal">Cadastrar</a>
+        </div>
+      </div>  <!-- /.modal#cadastrarOcorrencia -->
+
+      <div class="modal fade hide" id="visualizarPessoas">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h3>Escola A - Seção X</h3>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn" data-dismiss="modal" data-dismiss="modal">Fechar</a>
+        </div>
+      </div> <!-- /.modal#visualizarPessoas -->
+              
+      <div class="modal fade hide" id="cadastrarOcorrenciaCorregedoria">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h3>Cadastrar ocorrência</h3>
+        </div>
+        <div class="modal-body">                
+          <form action="#" class="form-horizontal">
+            <div class="control-group">
+              <label for="municipio" class="control-label">Município</label>
+              <div class="controls"><input type="text" class="input-xlarge mun-autocomplete" id="nome" /></div>
+            </div>
+            <div class="control-group">
+              <label for="natureza" class="control-label">Natureza</label>
+              <div class="controls">
+                <select class="input-xlarge" id="natureza">
+                  <option value="">Escolha uma</option>
+                  <option value="Auto-falantes, aplificadores, comícios e carretas">Auto-falantes, aplificadores, comícios e carretas</option>
+                  <option value="Boca de urna e arregimentação de eleitores">Boca de urna e arregimentação de eleitores</option>
+                  <option value="Divulgação de propaganda">Divulgação de propaganda</option>
+                  <option value="Transporte ilegal de eleitores">Transporte ilegal de eleitores</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group inline">
+              <label for="municipio" class="control-label">Quant. com prisão</label>
+              <div class="controls">
+                <input type="text" id="nome" class="input-micro" />
+              </div>
+            </div>
+            <div class="control-group inline">
+              <label for="municipio" class="control-label">Quant. sem prisão</label>
+              <div class="controls">
+                <input type="text" id="nome" class="input-micro" />
+              </div>
+            </div>
+          </form>
+        </div> <!-- /.modal-body -->
+        <div class="modal-footer">
+          <a href="#" class="btn" data-dismiss="modal">Cancelar</a>
+          <a href="#" class="btn btn-primary" data-dismiss="modal">Cadastrar</a>
+        </div>
+      </div> <!-- /.modal#cadastrarOcorrenciaCorregedoria -->
+              
+      <div class="modal fade hide" id="visualizarDetalhesLocalTransmissao">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h3>Visualizar locais atendidos</h3>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Local de votação</th>
+                <th>Município</th>
+                <th>Colocação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Escola Arco-iris</td>
+                <td>Palmas</td>
+                <td>1º</td>
+              </tr>
+              <tr>
+                <td>Escola Arco-iris</td>
+                <td>Palmas</td>
+                <td>2º</td>
+              </tr>
+              <tr>
+                <td>Escola Arco-iris</td>
+                <td>Palmas</td>
+                <td>3º</td>
+              </tr>
+              <tr>
+                <td>Escola Arco-iris</td>
+                <td>Palmas</td>
+                <td>4º</td>
+              </tr>
+              <tr>
+                <td>Escola Arco-iris</td>
+                <td>Palmas</td>
+                <td>5º</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Estes locais de votação terão seus boletins de urnas transmitidos neste local de transmissão.</p>
+        </div> <!-- /.modal-body -->
+        <div class="modal-footer">
+          <a href="#" class="btn" data-dismiss="modal">Fechar</a>
+        </div>
+      </div> <!-- /.modal#cadastrarOcorrenciaCorregedoria -->
+  
+      <footer class="footer">
+        <p class="pull-right"><a href="#">Voltar ao Topo</a></p>
+        <p>
+          <ul class="nav nav-pills">
+            <li class="active"><a href="#" title="Inicial">Inicial</a></li>
+            <li><a href="#" title="Fórum">Fórum</a></li>
+            <li><a href="#" title="Manual do eleitor">Manual do eleitor</a></li>
+            <li><a href="#" title="Notícias">Notícias</a></li>
+            <li><a href="#" title="Contatos">Contatos</a></li>
+          </ul>
+        </p>
+        <p>SAURON &copy; 2007-2012. Tribunal Regional Eleitoral - <a href="#">Seção de Sistema e Administração Web</a>.</p>
+      </footer>
+      
+    </div> <!-- /.container -->
+  
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.autosuggest.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/widgets.js"></script>
+    <script src="js/widgets.controllers.js"></script>
+    <script src="js/widgets.directives.js"></script>
+    <script src="js/widgets.storages.js"></script>
+  </body>
+</html>
